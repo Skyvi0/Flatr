@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
+
   <head>
+  <%= render 'shared/navbar' %>
+  <%= render 'shared/flashes' %>
+
     <title>Flatr</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -10,9 +14,13 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+
   </head>
 
   <body>
     <%= yield %>
   </body>
 </html>
+
+ <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p

@@ -6,4 +6,9 @@ class FlatsController < ApplicationController
     @flats = policy_scope(Flat).order(created_at: :desc)
   end
 
+  def show
+    @flat = Flat.find(params[:id])
+    authorize @flat
+  end
+
 end

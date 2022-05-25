@@ -5,5 +5,9 @@ class FlatPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
-   end
   end
+
+  def show?
+    true
+  end
+end

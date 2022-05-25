@@ -6,3 +6,9 @@
     <h3>price: <%= flat.price %></h3>
   </div>
 <% end %>
+<!-- when you click on a flat, go to their show page  -->
+  <% @flats.each do |flat| %>
+    <%= link_to flat.description, flat_path(flat) %>
+  <% end %>
+
+<!-- after Sofiane is done - add a link to create a new flat -->

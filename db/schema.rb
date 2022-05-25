@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2022_05_25_104050) do
+=======
+ActiveRecord::Schema.define(version: 2022_05_25_100738) do
+>>>>>>> eb700758dae37496cb50104f129f291336c8cdab
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +23,10 @@ ActiveRecord::Schema.define(version: 2022_05_25_104050) do
     t.string "flat_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+<<<<<<< HEAD
     t.string "user_id"
+=======
+>>>>>>> eb700758dae37496cb50104f129f291336c8cdab
   end
 
   create_table "flats", force: :cascade do |t|

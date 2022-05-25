@@ -1,6 +1,8 @@
 <h1>these are some flats</h1>
 <% @flats.each do |flat| %>
-  <h3>flat <%= flat.description %></h3>
-  <h3>flat <%= flat.adress %></h3>
-  <h3>flat <%= flat.price %></h3>
+  <div>
+    <h3>descirption: <%= flat.description %></h3>
+    <h3>adress: <%= flat.adress %></h3>
+    <h3>price: <%= flat.price %></h3>
+  </div>
 <% end %>

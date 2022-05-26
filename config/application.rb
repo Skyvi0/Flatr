@@ -1,5 +1,5 @@
 require_relative "boot"
-
+# has_one_attached :photo
 require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems

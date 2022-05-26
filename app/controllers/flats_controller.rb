@@ -16,7 +16,7 @@ class FlatsController < ApplicationController
   end
 
   # GET /flats/1/edit
- # def edit
+ def edit
   end
 
   # POST /flats
@@ -32,20 +32,20 @@ class FlatsController < ApplicationController
  end
 
 # PATCH/put /flat/1
-#def update
-  #if @flat.update (flat_params)
-    #redirect_to @flat, notice: 'flat was successfully update.'
-   # else
-     # render :edit
-   # end
-#end
+def update
+  if @flat.update (flat_params)
+    redirect_to @flat, notice: 'flat was successfully update.'
+   else
+     render :edit
+   end
+end
 
-# DELETE/flat/1
-#def destroy
-  #if @flat.destroy
-    #redirect_to flat_url, notice: 'flat was successfully detroyed.'
-   # else
-      #render :edit
-    #end
-  #end
+#DELETE/flat/1
+def destroy
+  if @flat.destroy
+    redirect_to flat_url, notice: 'flat was successfully detroyed.'
+   else
+      render :edit
+    end
+  end
 end

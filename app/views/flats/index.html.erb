@@ -1,14 +1,15 @@
 <h1>these are some flats</h1>
 <% @flats.each do |flat| %>
   <div>
-    <h3>descirption: <%= flat.description %></h3>
+    <h3>description: <%= flat.description %></h3>
     <h3>adress: <%= flat.adress %></h3>
     <h3>price: <%= flat.price %></h3>
+    <%= link_to "show", flat_path(flat) %>
+    <%= link_to "edite", flat_path(flat) %>
+    <%= link_to "update", flat_path(flat) %>
+    <%= link_to "delete", destroy_path(flat) %>
   </div>
 <% end %>
 <!-- when you click on a flat, go to their show page  -->
-  <% @flats.each do |flat| %>
-    <%= link_to flat.description, flat_path(flat) %>
-  <% end %>
 
 <!-- after Sofiane is done - add a link to create a new flat -->

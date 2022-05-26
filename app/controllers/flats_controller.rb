@@ -1,5 +1,5 @@
 class FlatsController < ApplicationController
-  before_action :set_flat, only: [:show, :create, :update, :destroy]
+  before_action :set_flat, only: [:show, :edit, :update, :destroy]
 
   skip_before_action :authenticate_user!, only: [:index]
 
@@ -12,27 +12,24 @@ class FlatsController < ApplicationController
     authorize @flat
   end
 
- # GET /flats/new
-  #def new
-    #@flat =Flat.new
-  #end
+
 
   # GET /flats/1/edit
-  #def edit
-   #@flat =Flat.edit
-  #end
-
-  # POST /flats
-  def create
-    @flat =Flat.new(flat_params)
-
-    if @flat.save
-     # redirect_to @flat, notice: 'flat was successfully created.'
-    else
-      render :new
+  def edit
+   @flat =Flat.edit
   end
 
- end
+  # POST /flats
+  #def create
+    #@flat =Flat.new(flat_params)
+
+    #if @flat.save
+     # redirect_to @flat, notice: 'flat was successfully created.'
+    #else
+      #render :new
+  #end
+
+ #end
 
 # PATCH/put /flat/1
 def update

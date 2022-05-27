@@ -12,3 +12,12 @@
   <% end %>
 
 <!-- after Sofiane is done - add a link to create a new flat -->
+<div class="card-flat">
+  <% @flats.each do |f| %>
+  <%= f.adress %>
+  <%= f.description %>
+  <%= f.price%>
+<% end %>
+
+  </div>
+</div>

@@ -52,15 +52,15 @@ puts 'Cleaning flat database...'
 Flat.destroy_all
 
 uris.each_with_index do |uri, index|
-      file = URI.open(uri)
-      flat = Flat.new(
-        user: User.last,
-        adress: flat_names[index],
-        description: flat_description[index],
-        price: "#{rand(200..3000)}."
-      )
-      flat.photo.attach(io: file, filename: "#{flat.adress.split.first(5).join('_')}.jpg", content_type: 'image/jpg')
-      flat.save
-      p flat
-      puts "flat created"
+  file = URI.open(uri)
+  flat = Flat.new(
+    user: User.last,
+    adress: flat_names[index],
+    description: flat_description[index],
+    price: "#{rand(200..3000)}."
+  )
+  flat.photo.attach(io: file, filename: "#{flat.adress.split.first(5).join('_')}.jpg", content_type: 'image/jpg')
+  flat.save
+  p flat
+  puts "flat created"
 end

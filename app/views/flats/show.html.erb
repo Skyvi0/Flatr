@@ -1,3 +1,5 @@
 <h1><%= @flat.description %></h1>
 <h3> <%= @flat.adress %></h3>
-<!-- add a link to go back to the index -->
+<%= simple_form_for([@flat, @booking]) do |f| %>
+  <%= f.submit %>
+<% end %><!-- add a link to go back to the index -->

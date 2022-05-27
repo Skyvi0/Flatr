@@ -33,7 +33,6 @@ flat_names = [
   'Magazin Cover Boho Moderne Villa @ Costa Azul Surf 11'
 ]
 
-
 flat_description = [
   'This cottage is located in the Lagunillas area, and has an unbeatable view. Built on stilts, its large windows.',
   'Sumberkima is a seaside village next to Pemuteran close to Menjangan Island, diving and snorkeling paradise.',
@@ -43,7 +42,6 @@ flat_description = [
   'Skylark Cabin is a private, luxury escape, nestled serenely within the awe inspiring landscape of Ben Ohau.',
   '4 bedroom, 4.5 bathroom modern Baja home in San Jose del Cabo designed by award-winning architect, Javier Campos.'
 ]
-
 
 # end
 
@@ -63,10 +61,10 @@ uris.each do |uri|
         description: "#{f_description}.",
         price: "#{rand(200..3000)}."
       )
-  flat.photo.attach(io: file, filename: "#{flat.adress.split.first(5).join('_')}.jpg", content_type: 'image/jpg')
-  flat.save
-  p flat
-  puts "flat created"
+      flat.photo.attach(io: file, filename: "#{flat.adress.split.first(5).join('_')}.jpg", content_type: 'image/jpg')
+      flat.save
+      p flat
+      puts "flat created"
     end
   end
 end

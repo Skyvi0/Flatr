@@ -8,6 +8,7 @@ class BookingsController < ApplicationController
   end
 
   def create
+    raise
     @booking = Booking.new
     @booking.flat = @flat
     @booking.user = current_user
@@ -25,7 +26,4 @@ class BookingsController < ApplicationController
     @flat = Flat.find(params[:flat_id])
   end
 
-  def strong_params
-    params.require(:booking).permit(:description, :price, :adress)
-  end
 end

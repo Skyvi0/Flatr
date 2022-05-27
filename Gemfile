@@ -26,6 +26,14 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 gem 'devise'
 
+gem 'cloudinary'
+
+gem 'random_name_generator'
+
+gem 'nokogiri', '~> 1.13', '>= 1.13.6'
+
+gem 'down'
+
 gem 'pundit', '~> 1.1'
 
 # Reduces boot times through caching; required in config/boot.rb
